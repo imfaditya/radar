@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;1,300&display=swap');
 
 @keyframes breath {
     0%{
@@ -8,6 +8,23 @@
     50%{
       transform: scale(1.6);
     }
+}
+
+.italic{
+    font-style: italic;
+}
+
+.light{
+    font-weight: 300;
+}
+
+.underline{
+    text-decoration: underline;
+    text-decoration-color: #FFC700;
+}
+
+.center{
+    text-align: center;
 }
 
 header{
@@ -34,7 +51,7 @@ header{
     margin: 0;
     padding: 0;
     color: rgb(16, 16, 16);
-    border: 1px solid red;
+    box-sizing: border-box;
 }
 
 a{
@@ -67,19 +84,17 @@ li:hover{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 70%;
+    width: 60%;
     line-height: 1.8;
-    padding: 20px 0;
+    padding: 40px 0;
 }
 
 .description h1, .description p{
     color: white;
 }
 
-.description h1{
+h1{
     font-size: 1.5em;
-    width: fit-content;
-    margin-bottom: 1px;
 }
 
 #about-us{
@@ -95,3 +110,154 @@ li:hover{
 #about-us h1{
     margin-bottom: 15px;
 }
+
+#trending h3{
+    font-size: 1.5em; 
+    margin-top: 20px;   
+}
+
+#trending{
+    margin: auto;
+    width: 60%;
+    padding: 40px 0;
+}
+
+#trending section{
+    margin-bottom: 50px;
+}
+
+.content{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.left-content{
+    width: 30%;
+}
+
+.right-content{
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#top-5{
+    display: flex;
+    flex-wrap: wrap;  
+    width: 80%;
+    margin: auto;
+    justify-content: space-between;
+    padding: 40px 0;
+}
+
+#top-5 h2{
+    flex-basis: 100%;
+    margin-bottom: 40px;
+}
+
+figure{
+    flex-basis: 19%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+figure img{
+    height: 340px;
+    margin-bottom: 17px;
+}
+
+figure img:hover {
+    transform: scale(1.1);
+    transition: ease .2s;
+}
+
+#contact{
+    padding: 40px 0;
+    display: flex;
+    flex-wrap: wrap;
+    width: 60%;
+    margin: auto;
+    justify-content: center;
+}
+
+#contact h2{
+    flex-basis: 100%;
+    margin-bottom: 20px;
+}
+
+aside{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 0 15px 15px 0;
+    background-image: linear-gradient(
+        rgba(67, 67, 67, 0.8), 
+        rgba(0, 0, 0, 1)
+    ),  url(/assets/images/aside-bg.jpg); 
+}
+
+aside h3, aside p{
+    margin-bottom: 10px;
+    text-align: center;
+    width: 200px;
+    margin-top: 10px;
+    color: white;
+}
+
+aside img{
+    border-radius: 20px;
+    width: 200px;
+}
+
+form, aside{
+    flex-basis: 50%;
+    padding: 60px 0;
+}
+
+
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 15px 0 0 15px;
+    background-image: linear-gradient(#ffc700, #d9aa01);
+}
+
+label{
+    margin-bottom: 5px;
+    width: 300px;
+}
+
+input, button{
+    width: 300px;
+    margin-bottom: 10px;
+    height: 35px;
+}
+
+button{
+    color: black;
+    background-color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+textarea{
+    margin-bottom: 20px;
+    width: 300px;
+    height: 100px;
+}
+
+input, textarea{
+    border: none;
+    border-radius: 5px;
+}
+
+input:hover, textarea:hover{
+    border: 2px solid #cea100;
+}
+
+footer
