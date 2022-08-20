@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap');
+
+@keyframes breath {
+    0%{
+      transform: scale(1);
+    }
+    
+    50%{
+      transform: scale(1.6);
+    }
+}
+
+header{
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    padding: 20px;
+    background-color: white;
+}
+
+.circle-decoration{
+    width: 150px;
+    height: 150px;
+    background-color: #FFC700;
+    border-radius: 100%;
+    position: absolute;
+    top: -75px;
+    right: -75px;
+    animation: breath 3s infinite;
+}
+
+*{
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: rgb(16, 16, 16);
+    border: 1px solid red;
+}
+
+a{
+    text-decoration: none;
+}
+
+#company-logo{
+    display: block;
+    margin: auto;
+}
+
+ul{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+li{
+    margin: 10px;
+}
+
+li:hover{
+    transform: scale(1.1);
+    transition: ease 0.2s;
+}
+
+.description{
+    margin: auto;
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 70%;
+    line-height: 1.8;
+    padding: 20px 0;
+}
+
+.description h1, .description p{
+    color: white;
+}
+
+.description h1{
+    font-size: 1.5em;
+    width: fit-content;
+    margin-bottom: 1px;
+}
+
+#about-us{
+    background-image: linear-gradient(
+        rgba(67, 67, 67, 0.5), 
+        rgba(0, 0, 0, 0.5)
+    ),  url(/assets/images/header.jpg); 
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+}
+
+#about-us h1{
+    margin-bottom: 15px;
+}
