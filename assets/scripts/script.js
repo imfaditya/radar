@@ -1,13 +1,17 @@
-const cacheKey = 'DARKMODE'
-let state = true;
-
+let state = false;
 const bgTarget = document.getElementsByClassName("bg-target");
 const txtTarget = document.getElementsByClassName("txt-target");
 const companyLogo = document.querySelector("#company-logo");
 const darkButton = document.querySelector(".dark-mode");
 const lightButton = document.querySelector(".light-mode");
 
+darkButton.addEventListener('click', function(event){
+  checkDarkMode();
+})
 
+lightButton.addEventListener('click', function(event){
+  checkDarkMode();
+})
 
 function checkDarkMode(){
   if(state === false){
@@ -22,6 +26,7 @@ function checkDarkMode(){
     companyLogo.setAttribute("src", "/assets/images/logo-white.svg");
     state = true;
     darkButton.classList.add("invisible");
+    lightButton.classList.remove("invisible");
   }else{
     for(let i = 0; i < bgTarget.length; i++){
       bgTarget[i].classList.remove("dark-bg-on");
@@ -37,6 +42,3 @@ function checkDarkMode(){
     darkButton.classList.remove("invisible");
   }
 }
-
-checkDarkMode();
-
