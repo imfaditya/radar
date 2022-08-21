@@ -1,0 +1,4 @@
+- poster film diambil random dari internet
+- icon-icon diambil dari flaticon
+- gambar diambil dari unsplash
+- logo dibuat sendiri

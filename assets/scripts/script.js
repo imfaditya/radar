@@ -23,7 +23,7 @@ function checkDarkMode(){
       txtTarget[i].classList.add("light-txt-on");
     }
 
-    companyLogo.setAttribute("src", "/assets/images/logo-white.svg");
+    companyLogo.setAttribute("src", "assets/images/logo-white.svg");
     state = true;
     darkButton.classList.add("invisible");
     lightButton.classList.remove("invisible");
@@ -36,7 +36,7 @@ function checkDarkMode(){
       txtTarget[i].classList.remove("light-txt-on");
     }
 
-    companyLogo.setAttribute("src", "/assets/images/logo-color.svg");
+    companyLogo.setAttribute("src", "assets/images/logo-color.svg");
     state = false;
     lightButton.classList.add("invisible");
     darkButton.classList.remove("invisible");
