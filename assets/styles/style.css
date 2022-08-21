@@ -31,8 +31,10 @@ header{
     position: sticky;
     top: 0;
     z-index: 1;
-    padding: 20px;
+    padding-top: 10px;
     background-color: white;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);
+    
 }
 
 .circle-decoration{
@@ -46,7 +48,7 @@ header{
     animation: breath 3s infinite;
 }
 
-*{
+body{
     font-family: 'Open Sans', sans-serif;
     margin: 0;
     padding: 0;
@@ -56,6 +58,7 @@ header{
 
 a{
     text-decoration: none;
+    color: rgb(16, 16, 16);
 }
 
 #company-logo{
@@ -67,6 +70,7 @@ ul{
     list-style: none;
     display: flex;
     justify-content: center;
+    margin: 0;
 }
 
 li{
@@ -75,7 +79,7 @@ li{
 
 li:hover{
     transform: scale(1.1);
-    transition: ease 0.2s;
+    transition: ease 0.3s;
 }
 
 .description{
@@ -84,9 +88,9 @@ li:hover{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 60%;
+    max-width: 1300px;
     line-height: 1.8;
-    padding: 40px 0;
+    padding: 100px 0;
 }
 
 .description h1, .description p{
@@ -118,7 +122,7 @@ h1{
 
 #trending{
     margin: auto;
-    width: 60%;
+    width: 1300px;
     padding: 40px 0;
 }
 
@@ -148,7 +152,7 @@ h1{
     flex-wrap: wrap;  
     width: 80%;
     margin: auto;
-    justify-content: space-between;
+    justify-content: space-around;
     padding: 40px 0;
 }
 
@@ -158,10 +162,11 @@ h1{
 }
 
 figure{
-    flex-basis: 19%;
+    flex-basis: 18%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin: 10px;
 }
 
 figure img{
@@ -174,11 +179,15 @@ figure img:hover {
     transition: ease .2s;
 }
 
+figcaption{
+    margin-bottom: 40px;
+}
+
 #contact{
     padding: 40px 0;
     display: flex;
     flex-wrap: wrap;
-    width: 60%;
+    width: 1300px;
     margin: auto;
     justify-content: center;
 }
@@ -252,12 +261,123 @@ textarea{
 }
 
 input, textarea{
-    border: none;
+    border: 1px solid white;
     border-radius: 5px;
 }
 
 input:hover, textarea:hover{
-    border: 2px solid #cea100;
+    border: 1px solid #cea100;
 }
 
-footer
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 0;
+    background-color: rgb(12, 12, 12);
+    font-size: 0.9em;
+}
+
+.left-footer, .right-footer{
+    flex-basis: 30%;
+}
+
+footer p{
+    color: white;
+}
+
+.right-footer p{
+    text-align: end;
+}
+
+/* Dark Mode */
+.button-mode{
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    cursor: pointer;
+}
+
+.dark-bg-on{
+    background-color: #17191a !important;
+}
+
+.light-txt-on{
+    color: white !important;
+}
+
+.invisible{
+    visibility: hidden;
+}
+
+
+/* Responsive */
+@media screen and (max-width:1395px){
+    .content{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .left-content{
+        width: 50%;
+        margin-bottom: 30px;
+    }
+
+    .right-content{
+        width: 100%;
+    }
+
+    .title, .type{
+        text-align: center;
+    }
+
+    .stream-logo{
+        margin-top: 20px;
+    }
+
+    .description, #trending, #contact{
+        width: 75%;
+    }
+}
+
+@media screen and (max-width: 1050px){
+    form, aside{
+        flex-basis: 100%;
+    }
+
+    aside{
+        border-radius: 0 0 15px 15px;
+    }
+
+    form{
+        border-radius: 15px 15px 0 0;
+    }
+
+    label, input, button, textarea{
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 540px){
+    .description, #trending, #contact{
+        width: 80%;
+    }
+
+    .left-content{
+        width: 80%;
+    }
+
+    footer{
+        flex-wrap: wrap;
+        padding: 40px 40px;
+    }
+
+    .left-footer, .right-footer{
+        flex-basis: 100%;
+        margin: 20px 0;
+    }
+
+    .right-footer p{
+        text-align: start;
+    }
+}
