@@ -300,15 +300,16 @@ footer p{
     cursor: pointer;
 }
 
-.dark-bg-on{
+.dark-on{
     background-color: #17191a !important;
-}
-
-.light-txt-on{
     color: white !important;
 }
 
-.invisible{
+.dark-on a{
+    color: white !important;
+}
+
+.dark-on .dark-mode{
     visibility: hidden;
 }
 

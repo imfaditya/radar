@@ -1,44 +1,14 @@
-let state = false;
-const bgTarget = document.getElementsByClassName("bg-target");
-const txtTarget = document.getElementsByClassName("txt-target");
-const companyLogo = document.querySelector("#company-logo");
-const darkButton = document.querySelector(".dark-mode");
-const lightButton = document.querySelector(".light-mode");
+const header = document.querySelector("header");
+const main = document.querySelector("main");
+const button = document.getElementsByClassName("button-mode");
 
-darkButton.addEventListener('click', function(event){
-  checkDarkMode();
-})
-
-lightButton.addEventListener('click', function(event){
-  checkDarkMode();
-})
+for(let i = 0; i < button.length; i++){
+  button[i].addEventListener('click', function(event){
+    checkDarkMode();
+  })
+}
 
 function checkDarkMode(){
-  if(state === false){
-    for(let i = 0; i < bgTarget.length; i++){
-      bgTarget[i].classList.add("dark-bg-on");
-    }
-
-    for(i = 0; i < txtTarget.length; i++){
-      txtTarget[i].classList.add("light-txt-on");
-    }
-
-    companyLogo.setAttribute("src", "assets/images/logo-white.svg");
-    state = true;
-    darkButton.classList.add("invisible");
-    lightButton.classList.remove("invisible");
-  }else{
-    for(let i = 0; i < bgTarget.length; i++){
-      bgTarget[i].classList.remove("dark-bg-on");
-    }
-
-    for(i = 0; i < txtTarget.length; i++){
-      txtTarget[i].classList.remove("light-txt-on");
-    }
-
-    companyLogo.setAttribute("src", "assets/images/logo-color.svg");
-    state = false;
-    lightButton.classList.add("invisible");
-    darkButton.classList.remove("invisible");
-  }
+  header.classList.toggle("dark-on");
+  main.classList.toggle("dark-on");
 }
